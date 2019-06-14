@@ -1,0 +1,63 @@
+snippet atc "test case of ActiveSupport::TestCase" !b
+require 'test_helper'
+
+class ${1:klass}Test < ActiveSupport::TestCase
+   test '${2:case_name}' do
+    ${0}
+   end
+end
+endsnippet
+
+
+
+
+snippet getFunctionPu "get function is public"
+  public function ${1:function_name} ($param,$type=0${2:par}){
+     $array = $this->getParam($param,${3:null},${4:null},0,$type);
+
+     if($array->status['Code'] != 200){
+         return $array;
+     } 
+     $where = array();
+     ${5:$where}
+
+  }
+endsnippet
+
+snippet getFunctionPr "get function is private"
+  private function ${1:function_name} ($param,$type=0${2:par}){
+     $array = $this->getParam($param,${3:null},${4:null},0,$type);
+
+     if($array->status['Code'] != 200){
+         return $array;
+     } 
+     $where = array();
+     ${5:$where}
+
+  }
+endsnippet
+
+
+snippet getFunctionPro "get function is protected"
+  protected function ${1:function_name} ($param,$type=0${2:par}){
+     $array = $this->getParam($param,${3:null},${4:null},0,$type);
+
+     if($array->status['Code'] != 200){
+         return $array;
+     } 
+     $where = array();
+     ${6:$where}
+
+  }
+endsnippet
+
+
+
+snippet getAnnotate "get annotate"
+  /**
+   * @title:${1:title}
+   * @des: ${2:des}
+   * @date: `date`
+   * @return ${3:return} 
+   **/
+endsnippet
